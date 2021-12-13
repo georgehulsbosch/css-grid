@@ -1,1 +1,83 @@
 /*Maak hier jouw CSS!*/
+@media screen and (min-width: 320px) {
+
+    .container {
+        background-color: rgba(255, 239, 213, 0.94);
+        color: rgba(255, 255, 255, 0.91);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px auto 50px 50px 50px 50px;
+        grid-template-areas:
+        "header"
+        "main"
+        "aside1"
+    "aside2"
+    "aside3"
+    "."
+        "footer";
+        row-gap: 16px;
+        column-gap: 16px;
+        padding: 20px;
+    }
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 20px;
+    border-style: solid;
+    border-color: #981c1c;
+}
+
+#header {
+    background-color: #be3838;
+    grid-area: header;
+}
+
+#footer {
+    background-color: #be3838;
+    grid-area: footer;
+}
+
+#main {
+    background-color: #be3838;
+    grid-area: main;
+}
+
+#aside1 {
+    background-color: #be3838;
+    grid-area: aside1;
+}
+
+#aside2 {
+    background-color: #be3838;
+    grid-area: aside2;
+}
+
+#aside3 {
+    background-color: #be3838;
+    grid-area: aside3;
+}
+
+@media screen and (min-width: 576px) {
+
+    .container {
+        background-color: papayawhip;
+        color: white;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 50px 174px 100px auto 50px;
+        padding: 20px;
+        grid-template-areas:
+"header aside1 aside1"
+"main aside1 aside1"
+"main aside3 aside2"
+"main aside3 ."
+"footer footer footer";
+        row-gap: 16px;
+        column-gap: 16px;
+    }
+}
